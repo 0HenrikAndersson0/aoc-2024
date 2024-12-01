@@ -13,3 +13,4 @@ export const splitDataOnRows = (text:string):string[] => {
   return text.split(/\r?\n|\r|\n/g);
 }
 
+
