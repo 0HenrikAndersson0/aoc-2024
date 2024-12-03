@@ -13,4 +13,8 @@ export const splitDataOnRows = (text:string):string[] => {
   return text.split(/\r?\n|\r|\n/g);
 }
 
+export const readFromFile = async (path:string) => {
+  const text = await Deno.readTextFile(path);
+  return text;
+}
 

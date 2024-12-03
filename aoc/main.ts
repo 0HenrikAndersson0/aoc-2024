@@ -8,7 +8,10 @@ import {
   partOne as DayTwoPartOne,
   partTwo as DayTwoPartTwo,
 } from "./Day2/task.ts";
-
+import {
+  partOne as DayThreePartOne,
+  partTwo as DayThreePartTwo,
+} from "./Day3/task.ts";
 const flags = parseArgs(Deno.args, {
   boolean: ["all"],
   string: ["day"],
@@ -28,9 +31,16 @@ const dayTwo = () => {
   console.log(`Result part two: ${DayTwoPartTwo()}`);
 };
 
+const dayThree = async () => {
+  console.xmas("**** AOC | Day 3 ****");
+  console.log(`Result part one: ${await DayThreePartOne()}`);
+  console.log(`Result part two: ${await DayThreePartTwo()}`);
+};
+
 if (flags.all) {
   dayOne();
   dayTwo();
+  dayThree();
 } else {
   switch (flags.day) {
     case "1":
@@ -38,6 +48,9 @@ if (flags.all) {
       break;
     case "2":
       dayTwo();
+      break;
+      case "3":
+      await dayThree();
       break;
   }
 }
