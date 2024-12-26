@@ -11,7 +11,7 @@
             "program": "${file}",
             "cwd": "${workspaceFolder}",
             "env": {},
-            "runtimeExecutable": "/home/henrik/.deno/bin/deno",
+            "runtimeExecutable": "C:\\Users\\Henrik\\.deno\\bin\\deno.EXE",
             "runtimeArgs": [
                 "run",
                 "--unstable",
