@@ -20,7 +20,10 @@ import {
   partOne as DayFivePartOne,
   partTwo as DayFivePartTwo,
 } from "./Day5/task.ts";
-
+import {
+  partOne as DaySixPartOne,
+  partTwo as DaySixPartTwo,
+} from "./Day6/task.ts";
 
 const flags = parseArgs(Deno.args, {
   boolean: ["all"],
@@ -54,9 +57,15 @@ const dayFour = async () => {
 };
 
 const dayFive = async () => {
-  console.xmas("**** AOC | Day 4 ****");
+  console.xmas("**** AOC | Day 5 ****");
   console.log(`Result part one: ${DayFivePartOne()}`);
   console.log(`Result part two: ${DayFivePartTwo()}`);
+};
+
+const daySix = async () => {
+  console.xmas("**** AOC | Day 6 ****");
+  console.log(`Result part one: ${DaySixPartOne()}`);
+  console.log(`Result part two: ${DaySixPartTwo()}`);
 };
 
 if (flags.all) {
@@ -65,6 +74,7 @@ if (flags.all) {
   dayThree();
   dayFour();
   dayFive();
+  daySix();
 } else {
   switch (flags.day) {
     case "1":
@@ -81,6 +91,9 @@ if (flags.all) {
       break;
       case "5":
       await dayFive();
+      break;
+      case "6":
+      await daySix();
       break;
   }
 }
