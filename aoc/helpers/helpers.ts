@@ -18,3 +18,26 @@ export const readFromFile = async (path:string) => {
   return text;
 }
 
+export const grayCodeBit = (n:number) => { 
+  const resultCode = []; 
+  for (let i = 0; i < 1 << n; i++) { 
+      resultCode.push(i ^ (i >> 1)); 
+  } 
+  return resultCode.map((code) => 
+      code.toString(2).padStart(n, '0')); 
+} 
+
+export const generateCombinations = (characters: string[], n: number): string[] => {
+  if (n === 1) {
+    return characters;
+  }
+  const smallerCombinations = generateCombinations(characters, n - 1);
+  const combinations = [];
+  for (const smaller of smallerCombinations) {
+    for (const char of characters) {
+      combinations.push(smaller + char);
+    }
+  }
+  return combinations;
+}
+

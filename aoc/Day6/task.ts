@@ -104,7 +104,7 @@ export const partTwo = () => {
   const left = "<";
   const right = ">";
   let currentDirection = up;
-  let initDirection = up;
+  const initDirection = up;
   const obstruction = "#";
   const obstruction2 = "O";
   let loops = 0;
